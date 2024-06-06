@@ -30,6 +30,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
+//@CrossOrigin(origins = "http://localhost:3001")
 @RequestMapping("/registerDocHs")
 public class DocHsController {
 
@@ -54,8 +55,53 @@ public class DocHsController {
     @Autowired
     private RefreshTokenService refreshTokenService;
 
-    @PostMapping("/doctor")
-    public ResponseEntity<String> registerDoctor(@RequestHeader("Auth") String jwtToken, @RequestBody DocHs doctor) {
+//    @PostMapping("/doctor")
+//    public ResponseEntity<String> registerDoctor(@RequestHeader("Auth") String jwtToken, @RequestBody DocHs doctor) {
+//        // Extract username from JWT token
+//        String token = jwtToken.replace("Bearer ", "");
+//        String username = jwtHelper.getUsernameFromToken(token);
+//
+//        // Fetch user details if needed
+//        User user = userService.findByUsername(username);
+//
+//        // Check if the user's role is SUB_ADMIN
+//        if (user.getRoles().stream().anyMatch(role -> role.getName().equals("SUB_ADMIN"))) {
+//            // Set type and register doctor
+////            doctor.setType("DOCTOR");
+//            docHSService.registerDocHS(doctor);
+//
+//            return new ResponseEntity<>("Doctor registered successfully!", HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>("Unauthorized to register doctors!", HttpStatus.UNAUTHORIZED);
+//        }
+//    }
+//
+//
+//
+//    @PostMapping("/healthOfficer")
+//    public ResponseEntity<String> registerHealthOfficer(@RequestHeader("Auth") String jwtToken, @RequestBody DocHs healthOfficer) {
+//        // Extract username from JWT token
+//        String token = jwtToken.replace("Bearer ", "");
+//        String username = jwtHelper.getUsernameFromToken(token);
+//
+//        // Fetch user details if needed
+//        User user = userService.findByUsername(username);
+//
+//        // Check if the user's role is SUB_ADMIN
+//        if (user.getRoles().stream().anyMatch(role -> role.getName().equals("SUB_ADMIN"))) {
+//            // Set type and register health officer
+////            healthOfficer.setType("HEALTH_OFFICER");
+//            docHSService.registerDocHS(healthOfficer);
+//
+//            return new ResponseEntity<>("Health Officer registered successfully!", HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>("Unauthorized to register health officers!", HttpStatus.UNAUTHORIZED);
+//        }
+//    }
+
+
+    @PostMapping("/register")
+    public ResponseEntity<String> registerDocHS(@RequestHeader("Auth") String jwtToken, @RequestBody DocHs docHS) {
         // Extract username from JWT token
         String token = jwtToken.replace("Bearer ", "");
         String username = jwtHelper.getUsernameFromToken(token);
@@ -65,38 +111,18 @@ public class DocHsController {
 
         // Check if the user's role is SUB_ADMIN
         if (user.getRoles().stream().anyMatch(role -> role.getName().equals("SUB_ADMIN"))) {
-            // Set type and register doctor
-//            doctor.setType("DOCTOR");
-            docHSService.registerDocHS(doctor);
+            // Determine the user type based on the type field
+            String userType = docHS.getType().equals("Doctor") ? "Doctor" : "Health Officer";
 
-            return new ResponseEntity<>("Doctor registered successfully!", HttpStatus.OK);
+            // Register doctor or health officer based on type
+            docHSService.registerDocHS(docHS, userType);
+
+            return ResponseEntity.ok(userType + " registered successfully!");
         } else {
-            return new ResponseEntity<>("Unauthorized to register doctors!", HttpStatus.UNAUTHORIZED);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized to register");
         }
     }
 
-
-
-    @PostMapping("/healthOfficer")
-    public ResponseEntity<String> registerHealthOfficer(@RequestHeader("Auth") String jwtToken, @RequestBody DocHs healthOfficer) {
-        // Extract username from JWT token
-        String token = jwtToken.replace("Bearer ", "");
-        String username = jwtHelper.getUsernameFromToken(token);
-
-        // Fetch user details if needed
-        User user = userService.findByUsername(username);
-
-        // Check if the user's role is SUB_ADMIN
-        if (user.getRoles().stream().anyMatch(role -> role.getName().equals("SUB_ADMIN"))) {
-            // Set type and register health officer
-//            healthOfficer.setType("HEALTH_OFFICER");
-            docHSService.registerDocHS(healthOfficer);
-
-            return new ResponseEntity<>("Health Officer registered successfully!", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("Unauthorized to register health officers!", HttpStatus.UNAUTHORIZED);
-        }
-    }
 //    @PostMapping("/login")
 //    public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request)
 //    {

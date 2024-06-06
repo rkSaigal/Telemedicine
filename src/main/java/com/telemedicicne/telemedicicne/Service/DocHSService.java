@@ -49,22 +49,51 @@ public class DocHSService {
 //
 //    docHSRepository.save(docHS);
 //}
-public void registerDocHS(DocHs docHS) {
+//public void registerDocHS(DocHs docHS) {
+//    // Check if a user with the same email already exists
+//    Optional<User> existingUser = userRepository.findByEmail(docHS.getEmail());
+//    if (existingUser.isPresent()) {
+//        throw new IllegalArgumentException("User with email " + docHS.getEmail() + " already exists");
+//    }
+//
+////    newUser.setPassword(passwordEncoder.encode(request.password()));
+//
+//    // Encode the password
+//    String encodedPassword = passwordEncoder.encode(docHS.getPassword());
+//    docHS.setPassword(encodedPassword); // Set the encoded password to DocHs entity
+//
+//    docHS.setType(docHS.getType());
+//    // Determine the role name based on the type
+//    String roleName = docHS.getType().equals("DOCTOR") ? "DOCTOR" : "HEALTH_OFFICER";
+//    Role role = roleRepository.findByName(roleName);
+//
+//    if (role != null) {
+//        Set<Role> roles = new HashSet<>();
+//        roles.add(role);
+//        docHS.setRoles(roles);
+//    } else {
+//        throw new IllegalArgumentException("Role not found: " + roleName);
+//    }
+//
+//    // Save the new DocHs entity
+//    docHSRepository.save(docHS);
+//}
+public void registerDocHS(DocHs docHS, String userType) {
     // Check if a user with the same email already exists
     Optional<User> existingUser = userRepository.findByEmail(docHS.getEmail());
     if (existingUser.isPresent()) {
         throw new IllegalArgumentException("User with email " + docHS.getEmail() + " already exists");
     }
 
-//    newUser.setPassword(passwordEncoder.encode(request.password()));
-
     // Encode the password
     String encodedPassword = passwordEncoder.encode(docHS.getPassword());
-    docHS.setPassword(encodedPassword); // Set the encoded password to DocHs entity
+    docHS.setPassword(encodedPassword);
 
-    docHS.setType(docHS.getType());
-    // Determine the role name based on the type
-    String roleName = docHS.getType().equals("DOCTOR") ? "DOCTOR" : "HEALTH_OFFICER";
+    // Set the user type to the provided value
+    docHS.setType(userType);
+
+    // Determine the role name based on the userType
+    String roleName = userType.equals("Doctor") ? "DOCTOR" : "HEALTH_OFFICER";
     Role role = roleRepository.findByName(roleName);
 
     if (role != null) {

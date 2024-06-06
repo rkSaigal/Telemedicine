@@ -124,7 +124,7 @@ public class SecurityConfig {
                                 .requestMatchers("/auth/health-trends/**").authenticated()
                                 .requestMatchers("/register/**").permitAll()
 //                                .requestMatchers("/registerDocHs/**").hasRole("SUB_ADMIN")
-//                                .requestMatchers("/registerDocHs/**").permitAll()
+                                .requestMatchers("/registerDocHs/**").permitAll()
 
                                 
                                 .requestMatchers("/registerDocHs/login").permitAll()

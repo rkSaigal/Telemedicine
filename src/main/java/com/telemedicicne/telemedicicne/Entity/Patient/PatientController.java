@@ -21,6 +21,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -107,8 +108,8 @@ public class PatientController {
             patient.setEmail(patientRequest.getEmail());
 
             // Encode the password
-            String encodedPassword = passwordEncoder.encode(patientRequest.getPassword());
-            patient.setPassword(encodedPassword); // Set the encoded password to DocHs entity
+//            String encodedPassword = passwordEncoder.encode(patientRequest.getPassword());
+//            patient.setPassword(encodedPassword); // Set the encoded password to DocHs entity
 //            patient.setPassword(patientRequest.getPassword());
             patient.setMobileNo(patientRequest.getMobileNo());
             patient.setAddress(patientRequest.getAddress());
@@ -343,9 +344,18 @@ public class PatientController {
 
             // Verify OTP
             if (otp.equals(patient.getOtpCode()) && LocalDateTime.now().isBefore(patient.getOtpExpiration())) {
+//                // Generate JWT token
+//                UserDetails userDetails = new org.springframework.security.core.userdetails.User(
+//                        patient.getUsername(),  patient.getAuthorities());
                 // Generate JWT token
                 UserDetails userDetails = new org.springframework.security.core.userdetails.User(
-                        patient.getUsername(), patient.getPassword(), patient.getAuthorities());
+                        patient.getUsername(),
+//                        patient.getPassword(),
+                        "",
+                        patient.getRoles().stream()
+                                .map(role -> new SimpleGrantedAuthority(role.getName()))
+                                .collect(Collectors.toList())
+                );
                 String token = jwtHelper.generateToken(userDetails);
                 RefreshToken refreshToken = refreshTokenService.createRefreshToken(userDetails.getUsername());
 
