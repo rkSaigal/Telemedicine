@@ -1,8 +1,8 @@
 //package com.telemedicicne.telemedicicne.Service;
 //
 //
-//import com.telemedicicne.telemedicicne.Repository.DocHSRepository;
-//import com.telemedicicne.telemedicicne.Entity.DocHs;
+//import com.telemedicicne.telemedicicne.Repository.HealthOfficerRepository;
+//import com.telemedicicne.telemedicicne.Entity.HealthOfficer;
 //import com.telemedicicne.telemedicicne.Entity.User;
 //import com.telemedicicne.telemedicicne.Repository.UserRepository;
 //import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@
 //    private UserRepository userRepository;
 //
 //    @Autowired
-//    private DocHSRepository docHSRepository;
+//    private HealthOfficerRepository docHSRepository;
 //
 //    @Override
 //    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -29,7 +29,7 @@
 //            return userOptional.get();
 //        }
 //
-//        Optional<DocHs> docHsOptional = docHSRepository.findByEmail(email);
+//        Optional<HealthOfficer> docHsOptional = docHSRepository.findByEmail(email);
 //        if (docHsOptional.isPresent()) {
 //            return docHsOptional.get();
 //        }

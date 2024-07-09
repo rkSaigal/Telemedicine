@@ -1,10 +1,12 @@
 package com.telemedicicne.telemedicicne.Service;
 
-import com.telemedicicne.telemedicicne.Entity.DocHs;
-import com.telemedicicne.telemedicicne.Entity.Patient.Patient;
-import com.telemedicicne.telemedicicne.Entity.Patient.PatientRepository;
-import com.telemedicicne.telemedicicne.Entity.User;
-import com.telemedicicne.telemedicicne.Repository.DocHSRepository;
+import com.telemedicicne.telemedicicne.Entity.Doctor;
+import com.telemedicicne.telemedicicne.Entity.HealthOfficer;
+import com.telemedicicne.telemedicicne.Entity.Patient;
+import com.telemedicicne.telemedicicne.Repository.PatientRepository;
+import com.telemedicicne.telemedicicne.Entity.Hospital;
+import com.telemedicicne.telemedicicne.Repository.DoctorRepository;
+import com.telemedicicne.telemedicicne.Repository.HealthOfficerRepository;
 import com.telemedicicne.telemedicicne.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -24,9 +26,11 @@ public class CustomUserDetailsService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
-    private DocHSRepository docHsRepository;
+    private HealthOfficerRepository docHsRepository;
     @Autowired
     private PatientRepository patientRepository;
+    @Autowired
+    private DoctorRepository doctorRepository;
 
 
 //    @Override
@@ -35,7 +39,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 //        if (userOptional.isPresent()) {
 //            return userOptional.get();
 //        } else {
-//            Optional<DocHs> docHsOptional = docHsRepository.findByEmail(email);
+//            Optional<HealthOfficer> docHsOptional = docHsRepository.findByEmail(email);
 //            if (docHsOptional.isPresent()) {
 //                return docHsOptional.get();
 //            } else {
@@ -43,13 +47,32 @@ public class CustomUserDetailsService implements UserDetailsService {
 //            }
 //        }
 //    }
+//@Override
+//public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+//    Optional<Hospital> userOptional = userRepository.findByEmail(email);
+//    if (userOptional.isPresent()) {
+//        return userOptional.get();
+//    } else {
+//        Optional<HealthOfficer> docHsOptional = docHsRepository.findByEmail(email);
+//        if (docHsOptional.isPresent()) {
+//            return docHsOptional.get();
+//        } else {
+//            Optional<Patient> patientOptional = patientRepository.findByMobileNo(email);
+//            if (patientOptional.isPresent()) {
+//                return patientOptional.get();
+//            } else {
+//                throw new UsernameNotFoundException("User not found with email: " + email);
+//            }
+//        }
+//    }
+//}
 @Override
 public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-    Optional<User> userOptional = userRepository.findByEmail(email);
+    Optional<Hospital> userOptional = userRepository.findByEmail(email);
     if (userOptional.isPresent()) {
         return userOptional.get();
     } else {
-        Optional<DocHs> docHsOptional = docHsRepository.findByEmail(email);
+        Optional<HealthOfficer> docHsOptional = docHsRepository.findByEmail(email);
         if (docHsOptional.isPresent()) {
             return docHsOptional.get();
         } else {
@@ -57,9 +80,15 @@ public UserDetails loadUserByUsername(String email) throws UsernameNotFoundExcep
             if (patientOptional.isPresent()) {
                 return patientOptional.get();
             } else {
-                throw new UsernameNotFoundException("User not found with email: " + email);
+                Optional<Doctor> doctorOptional = doctorRepository.findByEmail(email);
+                if (doctorOptional.isPresent()) {
+                    return doctorOptional.get();
+                } else {
+                    throw new UsernameNotFoundException("User not found with email: " + email);
+                }
             }
         }
     }
 }
+
 }

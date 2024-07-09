@@ -13,6 +13,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PatientRequest {
     private String patientName;
+//    private String firstName;
+//    private String lastName;
     private String addharNo;
     private Double height;
     private Double weight;

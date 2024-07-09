@@ -82,6 +82,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 
             } else {
+
                 logger.info("Validation fails !!");
             }
 
@@ -90,7 +91,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-
+}
 
     //new implimentation in future
 
@@ -98,7 +99,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 //    private UserRepository userRepository;
 //
 //    @Autowired
-//    private DocHSRepository docHSRepository;
+//    private HealthOfficerRepository docHSRepository;
 //    @Override
 //    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 //    String requestHeader = request.getHeader("Auth");
@@ -127,7 +128,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 //            userDetails = userDetailsService.loadUserByUsername(username);
 //        }
 //
-//        Optional<DocHs> docHsOptional = docHSRepository.findByEmail(username);
+//        Optional<HealthOfficer> docHsOptional = docHSRepository.findByEmail(username);
 //        if (docHsOptional.isPresent()) {
 //            UserDetails docHsDetails = userDetailsService.loadUserByUsername(username);
 //            Boolean validateToken = this.jwtHelper.validateToken(token, docHsDetails);
@@ -148,4 +149,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 //    filterChain.doFilter(request, response);
 //}
 
-}
+//}

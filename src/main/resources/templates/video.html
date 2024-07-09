@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Call</title>
+    <script th:src="@{/webjars/sockjs-client/sockjs.min.js}"></script>
+    <script th:src="@{/webjars/stomp-websocket/stomp.min.js}"></script>
+    <script th:src="@{/js/app.js}"></script>
+</head>
+<body>
+<h1>Video Call</h1>
+<div id="callStatus">Call Status: </div>
+<div>
+    <button onclick="initiateCall()">Initiate Call</button>
+</div>
+
+<script th:inline="javascript">
+    var userId = /*[[ ${userId} ]]*/ '1'; // Replace with logged-in user's ID
+    var socket = new SockJS('/ws');
+    var stompClient = Stomp.over(socket);
+
+    stompClient.connect({}, function (frame) {
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/call/' + userId, function (message) {
+            var callMessage = JSON.parse(message.body);
+            handleCallMessage(callMessage);
+        });
+    });
+
+    function initiateCall() {
+        var toUserId = 1 /* replace with recipient's ID */;
+        var fromOffer = 2/* offer data */;
+        var message = {
+            type: 'outgoing:call',
+            to: toUserId,
+            fromOffer: fromOffer
+        };
+        stompClient.send('/app/call', {}, JSON.stringify(message));
+    }
+
+    function handleCallMessage(message) {
+        if (message.type === 'incoming:call') {
+            var offer = message.offer; // Handle offer data
+            // Handle incoming call UI update or notification
+            document.getElementById('callStatus').innerText = 'Incoming Call from ' + message.from;
+        } else if (message.type === 'incoming:answer') {
+            var answer = message.answer; // Handle answer data
+            // Handle call accepted UI update or notification
+            document.getElementById('callStatus').innerText = 'Call accepted by ' + message.from;
+        }
+    }
+</script>
+</body>
+</html>

@@ -22,15 +22,15 @@ public class AllToggle {
     @JsonIgnore
     @OneToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private Hospital user;
 
-    public AllToggle(boolean notificationOn, boolean registration_term_condition, User user) {
+    public AllToggle(boolean notificationOn, boolean registration_term_condition, Hospital user) {
         this.notificationOn = notificationOn;
         this.registration_term_condition = registration_term_condition;
         this.user = user;
     }
 
-    public AllToggle(boolean notificationOn, User user) {
+    public AllToggle(boolean notificationOn, Hospital user) {
         this.notificationOn = notificationOn;
         this.user = user;
     }

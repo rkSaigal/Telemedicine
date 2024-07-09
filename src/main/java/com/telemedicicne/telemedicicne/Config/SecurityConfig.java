@@ -124,9 +124,11 @@ public class SecurityConfig {
                                 .requestMatchers("/auth/health-trends/**").authenticated()
                                 .requestMatchers("/register/**").permitAll()
 //                                .requestMatchers("/registerDocHs/**").hasRole("SUB_ADMIN")
+//                                .requestMatchers("/registerDocHs/{patientHealthMetricsId}").permitAll()
                                 .requestMatchers("/registerDocHs/**").permitAll()
-
-                                
+                                .requestMatchers("/registerDocHs/**").permitAll()
+                                .requestMatchers("/user/video.html").permitAll()
+                                .requestMatchers("ws://localhost:7075/ws").permitAll()
                                 .requestMatchers("/registerDocHs/login").permitAll()
                                 .requestMatchers("/registerDocHs/login/doctor").permitAll()
                                 .requestMatchers("/api/patients/**").permitAll()

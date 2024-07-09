@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63a4bce8-5f65-487a-a976-405f0a3168d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Dtos/DocHsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Dtos/DoctorDetailsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Dtos/PatientDetailsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Dtos/PatientHealthMetricsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Dtos/VideoTokenRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/PatientHealthMetrics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/HealthOfficerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/PatientHealthMetricsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/DoctorHospitalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/newVideoCall/UserServiceee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/newVideoCall/VideoCallHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/newVideoCall/WebSocketConfigggggg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/AnswerPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/CallPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/SignalingHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/UserControllerr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/VideoCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/VideoCallController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/VideoCallRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/VideoCallService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/WebSocketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/WebSocketSignalingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/HeaderLoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/WebSocketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Dtos/DocHsDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Dtos/PatientDetailsDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Dtos/PatientHealthMetricsDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Dtos/VideoTokenRequestDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Hospital.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/newVideoCall/UserServiceee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/newVideoCall/VideoCallHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/newVideoCall/WebSocketConfigggggg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/AnswerPayload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/CallPayload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/CallAcceptedMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/CallAcceptedResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/HeaderLoggingFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/IncomingCallMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/PeerNegoDoneMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/PeerNegoMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/RoomJoinMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/UserCallMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/UserJoinedMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/WebSocketConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/videoCallConfig/webSocket/WebSocketController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/telemedicicne/telemedicicne/TelemedicicneApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Controller/DocHsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Controller/DocHsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Controller/HospitalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/AllToggle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/AllToggle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/DocHs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/HealthOfficer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/OTPGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Config/OTPGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/OtpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/OtpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/PatientLoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Request/PatientLoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/PatientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Patient/PatientService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/RefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/RefreshToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Entity/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/AllToggleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/AllToggleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/DocHSRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Request/PatientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Request/PatientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/DocHSService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/RefreshTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/RefreshTokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Controller/DocHsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Controller/DocHsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/AllToggle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/AllToggle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/DocHs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/OTPGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/OtpService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/Patient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/PatientController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/PatientLoginRequest$PatientLoginRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/PatientLoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/PatientRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/Patient/PatientService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/RefreshToken$RefreshTokenBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/RefreshToken$RefreshTokenBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/RefreshToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/RefreshToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Repository/AllToggleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Repository/AllToggleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Repository/DocHSRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Request/PatientRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Request/PatientRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Security/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Security/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/DocHSService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/RefreshTokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/RefreshTokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/telemedicicne/telemedicicne/Service/UserService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ioSad4a3Te1gbucgSvm8u0a3gb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TelemedicicneApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;6f7997305578232467094741eda73496&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="TelemedicicneApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Telemedicine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.telemedicicne.telemedicicne.TelemedicicneApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63a4bce8-5f65-487a-a976-405f0a3168d1" name="Changes" comment="" />
+      <created>1720155501036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720155501036</updated>
+      <workItem from="1720155502200" duration="13096000" />
+      <workItem from="1720235967446" duration="1472000" />
+      <workItem from="1720239377786" duration="2559000" />
+      <workItem from="1720329390066" duration="18000" />
+      <workItem from="1720329422892" duration="6080000" />
+      <workItem from="1720410404416" duration="11668000" />
+      <workItem from="1720431587509" duration="3718000" />
+      <workItem from="1720498514325" duration="8099000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/telemedicicne/telemedicicne/Security/JwtAuthenticationFilter.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

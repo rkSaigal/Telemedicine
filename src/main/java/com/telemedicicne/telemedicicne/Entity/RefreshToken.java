@@ -1,6 +1,5 @@
 package com.telemedicicne.telemedicicne.Entity;
 
-import com.telemedicicne.telemedicicne.Entity.Patient.Patient;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,10 +22,12 @@ public class RefreshToken {
 
     private Instant expiry;
     @OneToOne
-    private User user;
+    private Hospital user;
 
     @OneToOne
-    private DocHs docHs;
+    private HealthOfficer healthOfficer;
+    @OneToOne
+    private Doctor doctor;
 
     @OneToOne
     private Patient patient;

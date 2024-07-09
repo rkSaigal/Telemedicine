@@ -3,7 +3,7 @@ package com.telemedicicne.telemedicicne.Service;
 import com.telemedicicne.telemedicicne.Config.AppConstants;
 import com.telemedicicne.telemedicicne.Entity.AllToggle;
 import com.telemedicicne.telemedicicne.Entity.Role;
-import com.telemedicicne.telemedicicne.Entity.User;
+import com.telemedicicne.telemedicicne.Entity.Hospital;
 import com.telemedicicne.telemedicicne.Exception.RegistrationException;
 import com.telemedicicne.telemedicicne.Exception.UserAlreadyExistsException;
 import com.telemedicicne.telemedicicne.Repository.AllToggleRepository;
@@ -31,9 +31,9 @@ public class UserService {
     private AllToggleRepository allToggleRepository;
 
     // for registering the user in application
-    public User registerUser(RegistrationRequest request) {
+    public Hospital registerUser(RegistrationRequest request) {
         // Check if the user with the provided email already exists
-        Optional<User> existingUser = userRepository.findByEmail(request.email());
+        Optional<Hospital> existingUser = userRepository.findByEmail(request.email());
         if (existingUser.isPresent()) {
             throw new UserAlreadyExistsException("User with email " + request.email() + " already exists");
         }
@@ -44,7 +44,7 @@ public class UserService {
         }
 
         // Proceed with user registration
-        User newUser = new User();
+        Hospital newUser = new Hospital();
         newUser.setMobileNo(request.mobileNo());
         newUser.setUserName(request.userName());
         newUser.setEmail(request.email());
@@ -56,7 +56,7 @@ public class UserService {
         newUser.getRoles().add(role);
 
         // Save the user
-        User savedUser = userRepository.save(newUser);
+        Hospital savedUser = userRepository.save(newUser);
 
         // Update AllToggle with registrationTermCondition
         Optional<AllToggle> allToggleOptional = Optional.ofNullable(allToggleRepository.findByUser(savedUser));
@@ -71,8 +71,8 @@ public class UserService {
 
         return savedUser;
     }
-    public User findByUsername(String username) {
-        Optional<User> userOptional = userRepository.findByEmail(username);
+    public Hospital findByUsername(String username) {
+        Optional<Hospital> userOptional = userRepository.findByEmail(username);
         return userOptional.orElse(null); // Return null if not found, or handle differently if needed
     }
 }
